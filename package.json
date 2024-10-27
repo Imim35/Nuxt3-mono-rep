@@ -12,11 +12,11 @@
   "scripts": {
     "lint": "eslint .",
     
-    "dev:webapp": "pnpm --filter @devstdo/webapp",
-    "dev:singleapp": "pnpm --filter @devstdo/singleapp",
-    "dev:extendedapp": "pnpm --filter @devstdo/extendedapp",
-    "design": "pnpm --filter @devstdo/design",
-    "dev": "concurrently \"pnpm dev:extendedapp dev --port=3002\" \"pnpm dev:singleapp dev --port=3001\" \"pnpm dev:webapp dev --port=3000\" \"pnpm design dev\"",
+    "dev:webapp": "pnpm --filter @devstdo/webapp dev",
+    "dev:singleapp": "pnpm --filter @devstdo/singleapp dev",
+    "dev:extendedapp": "pnpm --filter @devstdo/extendedapp dev",
+    "design": "pnpm --filter @devstdo/design dev",
+    "dev": "concurrently \"pnpm dev:extendedapp --port=3002\" \"pnpm dev:singleapp --port=3001\" \"pnpm dev:webapp --port=3000\" \"pnpm design\"",
 
     "build:webapp": "pnpm --filter @devstdo/webapp build",
     "build:singleapp": "pnpm --filter @devstdo/singleapp build",

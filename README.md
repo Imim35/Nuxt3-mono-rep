@@ -1,5 +1,3 @@
-#  @devstdo/nuxt3-pnpm-monorepo 💚
-
 <pre align="center">
 🚀 Opinionated Nuxt, Tailwind & Storybook monorepo for Nuxt 3 frontend webapps
 </pre>
@@ -18,7 +16,7 @@
 - 📥 APIs auto importing - for Composition API, VueUse, Components (localy & from design) and custom composables
 - [🦾 TypeScript](https://www.typescriptlang.org/) - JavaScript, but strongly typed and better
 
-## Architecture
+## Architecture FSD
 
 ### Apps
 

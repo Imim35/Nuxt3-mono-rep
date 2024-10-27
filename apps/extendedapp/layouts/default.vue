@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
@@ -16,8 +17,6 @@
         <span>
           {{ $t('general.footer') }}
         </span>
-
-        <UiButton>Button</UiButton>
       </div>
     </template>
   </LayoutApplication>
