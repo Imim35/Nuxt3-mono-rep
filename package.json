@@ -1,0 +1,32 @@
+{
+  "name": "@devstdo/nuxt-monorepo",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.12.2",
+  "keywords": [],
+  "main": "index.js",
+  "engines": {
+    "node": ">=20 <=22"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    
+    "dev:webapp": "pnpm --filter @devstdo/webapp",
+    "dev:singleapp": "pnpm --filter @devstdo/singleapp",
+    "dev:extendedapp": "pnpm --filter @devstdo/extendedapp",
+    "design": "pnpm --filter @devstdo/design",
+    "dev": "concurrently \"pnpm dev:extendedapp dev --port=3002\" \"pnpm dev:singleapp dev --port=3001\" \"pnpm dev:webapp dev --port=3000\" \"pnpm design dev\"",
+
+    "build:webapp": "pnpm --filter @devstdo/webapp build",
+    "build:singleapp": "pnpm --filter @devstdo/singleapp build",
+    "build:extendedapp": "pnpm --filter @devstdo/extendedapp build",
+    "build:all": "pnpm run build:webapp && pnpm run build:singleapp && pnpm run build:extendedapp"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "3.8.0",
+    "concurrently": "9.0.1",
+    "eslint": "9.13.0",
+    "typescript": "5.6.3"
+  }
+}

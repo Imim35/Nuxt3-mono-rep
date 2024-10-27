@@ -1,0 +1,31 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "tasks": {
+    "build": {
+      "cache": false,
+      "outputs": [
+        "dist/**",
+        ".output/**",
+        ".nuxt/**",
+        "storybook-static/**"
+      ]
+    },
+    "//#lint": {
+      "outputs": []
+    },
+    "dev": {
+      "dependsOn": ["^postinstall"],
+      "outputs": [
+        ".nuxt/**"
+      ],
+      "cache": true,
+      "persistent": true
+    },
+    "test": {
+      "outputs": []
+    }
+  }
+}
+
+//Файл конфигурации Turborepo, инструмента для управления монорепозиториями, предназначен для настройки различных задач проекта,
+//таких как сборка, запуск в режиме разработки и тестирование.
